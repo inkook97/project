@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(124, 54, 190);
+}
+
+nav>h1 {
+    float: left;
+    width: 20%;
+    line-height: 100px;
+    color: #fff;
+    text-align: center;
+}
+
+nav>ul {
+    float: right;
+    width: 40%;
+    line-height: 100px;
+    margin-right: 2%;
+}
+
+nav li {
+    float: left;
+    width: 20%;
+    /* 20*5(메뉴 5개)=100% */
+    text-align: center;
+}
+
+nav li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+#main {
+    width: 100%;
+    min-height: 760px;
+    background-image: url(/images/banner.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+section {
+    width: 63%;
+    overflow: hidden;
+    margin: 80px auto;
+}
+
+article {
+    width: 33.3%;
+    float: left;
+    line-height: 300px;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+article:nth-child(2n) {
+    background-color: violet;
+}
+
+
+@media screen and (max-width:1023px) {
+
+    nav>h1 {
+        display: none;
+    }
+
+    nav>ul {
+        float: none;
+        margin: 0 auto;
+        width: 63%;
+    }
+
+    #main {
+        background-image: url(/images/banner.gif);
+        min-height: 400px;
+    }
+
+    article {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    /*
+    em - 특정한 폰트 사이즈 기준의 배수값
+    : 부모기준
+    rem - 특정한 폰트 사이즈 기준의 배수값
+    : 최상단 html, body 기준
+    nav li { 15*1=15px font-size: 15px; }
+    */
+
+    * {
+        /* 원래 기본값 16px */
+        font-size: 10px;
+    }
+
+
+
+    nav li a {
+        /* 10*1=10px */
+        font-size: 1.3rem;
+    }
+
+    #main {
+        min-height: 250px;
+    }
+
+    article {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+}

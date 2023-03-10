@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        /* @media 미디어쿼리 선언 */
+        @media screen and (min-width:1024px) {
+
+            /* 내가 보고있는 화면사이즈 1024px 이상 화면기준! */
+            body {
+                background-color: yellow;
+            }
+        }
+
+        @media screen and (max-width:1023px) {
+
+            /* 내가 보고있는 화면사이즈 1023px 이하 화면기준! */
+            body {
+                background-color: aquamarine;
+            }
+        }
+
+        @media screen and (min-width:480px) and (max-width:767px) {
+
+            /* 480px ~ 767px에 스타일이 들어감*/
+            body {
+                background-color: violet;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
