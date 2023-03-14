@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열데이터타입</title>
+</head>
+
+<body>
+    <h3>문자열데이터타입</h3>
+    <script>
+        'use strict';
+        // 숫자형
+        const num1 = 10;
+        const num2 = 5;
+
+        // 문자열
+        const str1 = "Hello JavaScript";
+        const str2 = "Hello World";
+        const str3 = "10";
+
+        // 숫자연산 / 문자연산(결함)
+        console.log(num1 + num2); // 숫자연산
+        console.log(num1 + str1); // 문자연산(결함)
+        console.log(num1 + ""); // 문자연산(결함)
+
+        // typeof -> ()안의 값이 문자, 숫자, 논리형인지 확인 시켜줌
+        console.log(typeof (num1)); //숫자형(number)
+        console.log(typeof (num1 + '')); //문자열형(string)
+
+        console.log(str1 + " " + str2); //문자연산
+
+        console.log(str1 + "\n" + str2);
+        console.log('자바스크립트에서는 문자열을, 쌍따옴표, 따옴표로 둘러싸인 문자의 집합을 의미합니다.');
+        // ("", '') 겹치는 부분 때문에 두개 사용 
+        console.log('<img src="이미지 경로" alt="대체설명" />')
+
+        // 문제
+        // 10 + 5 = 15 
+        console.log(num1 + "+" + num2 + "=" + (num1 + num2))
+
+        // 객체형으로 변수값 선언 (` `) 
+        // ${}를 쓰면 값이 나옴
+        console.log(`${num1} + ${num2} = ${num1 + num2}`)
+
+    </script>
+</body>
+
+</html>
