@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>암시적 타입변환</h3>
+    <script>
+        'use strict'
+        const a = "문자열" + 10;
+        console.log(a);
+        console.log(typeof (a));
+
+        const b = '3' * '5';
+        // 문자열이라도 연산처리 할 경우 숫자열로 바뀜
+        console.log(b);
+        console.log(typeof (b));
+
+        const c = 10 - '문자열';
+        console.log(c);
+        // 할 수 없음 NaN
+        console.log(typeof (c));
+
+        const d = '10' - 20;
+        console.log(d);
+        console.log(typeof (d));
+    </script>
+
+</body>
+
+</html>
