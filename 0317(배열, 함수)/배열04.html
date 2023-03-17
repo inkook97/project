@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>배열4</h3>
+    <script>
+        'use strict'
+
+        // 배열개수는 임의로 설정
+        let arr1 = ['김사과', 20, 160.5, true];
+        console.log(arr1);
+
+        console.log('----------------------------------------push()');
+        arr1.push('여자');
+        console.log(arr1);
+
+        console.log('----------------------------------------shift()');
+        arr1.shift();
+        console.log(arr1);
+
+        console.log('----------------------------------------concat()');
+
+        // 배열2 생성, 배열 합치기 할때는 반드시 새로운 저장공간을 생성해야 합니다.
+        let arr2 = ['김사과', '서울', '학생'];
+
+        let arr = arr1.concat(arr2);
+        console.log(arr);
+
+        console.log('----------------------------------------join()');
+        arr = arr.join(' ');
+        console.log(arr);
+
+        arr2 = arr2.join(' | ');
+        console.log(arr2);
+
+        console.log('----------------------------------------sort()');
+        let arr3 = ['c', 'b', 'a', 'z', 'o'];
+        arr3.sort();
+        console.log(arr3);
+
+        // 반전
+        arr3.reverse();
+        console.log(arr3);
+
+    </script>
+</body>
+
+</html>

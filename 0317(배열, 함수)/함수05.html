@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict';
+        // 화살표 함수 -> 코드를 최소화
+        const hello1 = () => console.log('javascript');
+        const hello2 = (x, y) => console.log(`매개변수 전달 받은 x의 값은 ${x}, y의 값은 ${y}입니다.`);
+
+        const hello3 = (start, end) => {
+            let sum = 0;
+            for (let i = start; i <= end; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>함수05</h3>
+    <script>
+        'use strict';
+        hello1();
+
+        hello2(7, 3);
+
+        const result = hello3(1, 5);
+        console.log(result);
+
+
+        // 삼항연산자
+        const age = Number(prompt('나이를 입력하세요'));
+        let isAdult = (age > 18) ?
+            () => alert('성인입니다.') :
+            () => alert('미성년입니다.')
+
+        isAdult();
+
+    </script>
+</body>
+
+</html>
