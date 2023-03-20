@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $('#li01')
+            // $('ul > li#li01').next().css({ color: 'red' });
+            // next()는 선택된 대상의 다음 요소 선택
+
+            // $('ul > li#li01').parent().css({ color: 'red' });
+            // parent()는 선택된 대상에 한칸위에 부모 요소 선택
+
+            // $('ul > li#li01').parent().parent().css({ color: 'red' });
+            // parent().parent()부모의 부모
+
+            $('ul > li#li01').parents().css({ color: 'red' });
+            // parents() => 지정된 요소의 최상위 요소를 찾아감(잘 안씀)
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>parent()</h2>
+        <ul>
+            <li id="li01">menu</li>
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+            <li class="last">menu</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
