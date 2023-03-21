@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            cursor: pointer;
+            /* 마우스를 요소에 올리면 화살표 모양으로 변함 */
+            user-select: none;
+            /* 텍스트 드래그안됨  */
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div').focusin(function () {
+                $(this).css('background-color', '#ffffcc');
+            });
+            // input안에 클릭하면 배경색 적용
+
+            $('div').focusout(function () {
+                $(this).css('background-color', '#ffffff');
+            });
+            // input밖에 클릭하면 배경색적용
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <div style="border: 1px solid black; padding:10px;">
+        이름 : <input type="text"><br>
+        주소 : <input type="text"><br>
+    </div>
+</body>
+
+</html>

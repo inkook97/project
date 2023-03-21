@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            margin-top: 20px;
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border: 2px solid blue;
+        }
+
+        input {
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.fadeIn').click(function () {
+                $('#box').fadeIn(600);
+            });
+
+            $('.fadeOut').click(function () {
+                $('#box').fadeOut(600);
+            });
+            // fadeIn, Out => 형태를 유지하며 서서히 나타나고 서서히 사라짐
+
+            $('.fadeTo').click(function () {
+                $('#box').fadeTo(600, 0.5);
+                // $('#box').fadeTo(시간, 투명도(0 ~ 1)까지이며 1이 100%를 의미);
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="control">
+        <input class="fadeIn" type="button" value="fadeIn" />
+        <input class="fadeOut" type="button" value="fadeOut" />
+        <input class="fadeTo" type="button" value="fadeTo" />
+    </div>
+    <div id="wrapper">
+        <div id="box">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

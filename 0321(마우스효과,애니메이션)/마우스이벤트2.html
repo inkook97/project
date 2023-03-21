@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            cursor: pointer;
+            /* 마우스를 요소에 올리면 화살표 모양으로 변함 */
+            user-select: none;
+            /* 텍스트 드래그안됨  */
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('p').dblclick(function () {
+                // dblclick : 마우스 더블클릭시 작동
+                alert('텍스트를 더블클릭을 선택하였습니다.');
+            })
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <p><b>여기를 더블클릭하세요</b></p>
+
+</body>
+
+</html>

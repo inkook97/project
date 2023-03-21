@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            cursor: pointer;
+            /* 마우스를 요소에 올리면 화살표 모양으로 변함 */
+            user-select: none;
+            /* 텍스트 드래그안됨  */
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('p').mouseenter(function () {
+                $(this).css('background-color', 'blue');
+            }); // 마우스 올릴때 파란색 
+            $('p').mouseleave(function () {
+                $(this).css('background-color', 'pink');
+            }); // 마우스 치우면 핑크
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <p class="p1"><b>이곳에 마우스의 화살표를 글자영역 위에 가져다 대 봅시다.</b></p>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            cursor: pointer;
+            /* 마우스를 요소에 올리면 화살표 모양으로 변함 */
+            user-select: none;
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            /*
+            $('p').hover(
+                function () {// 대상에 마우스를 올렸을때 실행하는 함수
+                    // $('p').css('background-color', 'yellow'); // 모든 p태그가 다 먹혀 버리기 때문에 this사용
+                    $(this).css('background-color', 'yellow');
+                },
+                function () {// 대상에 마우스를 올렸다가 나갈때 실행하는 함수
+                    // $('p').css('background-color', 'pink');
+                    $(this).css('background-color', 'pink');
+                })
+                
+                 // hover 뒤에는 function 2개가 생김 .으로 구분해줌
+            */
+
+            $('.p1').mouseover(function () {
+                $(this).css('background-color', 'blue')
+            }) // 마우스 올릴때 파란색으로 변한상태 유지
+            $('.p2').mouseout(function () {
+                $(this).css('background-color', 'pink')
+            }) // 마우스를 올렸다 치웠을때 핑크색으로 바뀜
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <p class="p1"><b>01이곳에 마우스를 가져다 대 봅시다.</b></p>
+    <p class="p2"><b>02이곳에 마우스를 가져다 대 봅시다.</b></p>
+
+</body>
+
+</html>

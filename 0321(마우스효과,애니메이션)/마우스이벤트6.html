@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            cursor: pointer;
+            /* 마우스를 요소에 올리면 화살표 모양으로 변함 */
+            user-select: none;
+            /* 텍스트 드래그안됨  */
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).mousemove(function (event) {
+                $('span').text(event.pageX + ',' + event.pageY)
+            }); // mousemove => (function (event) 마우스가 움직일때 발생하는 이벤트
+            //마우스가 움직일때 X좌표, Y좌표를 화면에 표시함
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <p class="p1">마우스 좌표는 : <span></span>.</p>
+
+</body>
+
+</html>
