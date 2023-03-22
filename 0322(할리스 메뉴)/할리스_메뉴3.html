@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #header {
+            width: 100%;
+            height: 150px;
+            background-color: yellowgreen;
+        }
+
+        #header_in {
+            margin: 0 auto;
+            padding-top: 50px;
+            width: 1500px;
+            height: 150px;
+            background-color: rgb(159, 195, 87);
+        }
+
+        #header_in nav {
+            margin: 0 auto;
+            width: 600px;
+            height: 30px;
+            border: 1px solid #000;
+        }
+
+        #header_in nav>ul>li {
+            float: left;
+            width: 120px;
+            height: 30px;
+            position: relative;
+            text-align: center;
+            line-height: 30px;
+            border-right: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        #header_in nav>ul>li:last-child {
+            border-right: 0;
+        }
+
+        /*  */
+        #header_in nav>ul>li:hover {
+            display: block;
+            background-color: red;
+        }
+
+        #header_in nav>ul>li>a:hover {
+            display: block;
+            color: white;
+        }
+
+        #header_in nav .sub {
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            width: 100%;
+            border: 1px solid #000;
+
+        }
+
+
+        #header_in nav .sub li {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #header_in nav .sub li a {
+            color: rgb(172, 171, 171);
+        }
+
+        #header_in nav .sub li a:hover {
+            color: white;
+        }
+
+        #main_img {
+            width: 100%;
+            height: 400px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.easing.1.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sub').hide();//초기값,, 대상이 화면에 없다
+            //$('.sub').css({display:'none'});
+
+            $('#header_in nav>ul').hover(
+                function () {
+                    $(this).find('.sub').show();
+                },
+                function () {
+                    $(this).find('.sub').hide();
+                });
+
+            $('#header_in nav').hover(function () {
+                $(this).find('.sub li').css('background-color', ' rgb(77, 77, 77)');
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="header_in">
+            <nav>
+                <ul>
+                    <li><a href="">menu1</a>
+                        <ul class="sub">
+                            <li><a href="">submn1</a></li>
+                            <li><a href="">submn2</a></li>
+                            <li><a href="">submn3</a></li>
+                            <li><a href="">submn4</a></li>
+                            <li><a href="">submn5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">menu2</a>
+                        <ul class="sub">
+                            <li><a href="">submn1</a></li>
+                            <li><a href="">submn2</a></li>
+                            <li><a href="">submn3</a></li>
+                            <li><a href="">submn4</a></li>
+                            <li><a href="">submn5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">menu3</a>
+                        <ul class="sub">
+                            <li><a href="">submn1</a></li>
+                            <li><a href="">submn2</a></li>
+                            <li><a href="">submn3</a></li>
+                            <li><a href="">submn4</a></li>
+                            <li><a href="">submn5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">menu4</a>
+                        <ul class="sub">
+                            <li><a href="">submn1</a></li>
+                            <li><a href="">submn2</a></li>
+                            <li><a href="">submn3</a></li>
+                            <li><a href="">submn4</a></li>
+                            <li><a href="">submn5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">menu5</a>
+                        <ul class="sub">
+                            <li><a href="">submn1</a></li>
+                            <li><a href="">submn2</a></li>
+                            <li><a href="">submn3</a></li>
+                            <li><a href="">submn4</a></li>
+                            <li><a href="">submn5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</body>
+
+</html>
