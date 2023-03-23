@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            border: 1px solid blue;
+            padding: 20px;
+            margin: 20px;
+            font-size: 20px;
+        }
+
+        .newe1 {
+            color: red;
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // <추가하는 기능>
+            // append()는 지정된 요소의 자식요소에 마지막에 태그추가
+            // prepend()는 지정된 요소의 자식요소에 처음에 태그추가
+            // before()는 지정된 요소의 형제요소로 앞에 태그추가
+            // after()는 지정된 요소의 형제요소로 뒤에 태그추가
+
+            $('#wrapper>ul').append('<li class="newe1">3-5 (추가된 자식태그)</li>');
+            $('#wrapper>ul').prepend('<li class="newe1">3-0 (추가된 자식태그)</li>');
+
+            $('#wrapper>ul').before('<h3 class="newe1">2-1 (추가된 형제태그)</h3>');
+            $('#wrapper>ul').after('<h3 class="newe1">4-1 (추가된 형제태그)</h3>');
+
+
+            // <삭제하는 기능>
+            // remove()는 요소삭제
+
+            $('#wrapper>ul').find('li').eq(1).remove();
+            // eq(1).remover() => li중 index값 1번을 삭제
+
+            // <복제하는 기능>
+            var cloneEl = $('#wrapper>ul').clone();
+            $('#new_area').append(cloneEl);
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <ul>
+            <li>3-1</li>
+            <li>3-2</li>
+            <li>3-3</li>
+            <li>3-4 ( 아래에 3-5를 채워주세요. )</li>
+        </ul>
+    </div>
+    <hr />
+    <div id="new_area">
+
+    </div>
+
+</body>
+
+</html>
