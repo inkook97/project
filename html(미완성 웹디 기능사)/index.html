@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.list').hide();
+
+
+            $('.nav>ul').mouseenter(function (e) {
+                e.preventDefault();
+
+                $('.list').css('background-color', '#fff').slideDown(500);
+            });
+            $('.nav>ul').mouseleave(function (e) {
+                e.preventDefault();
+
+                $('.list').slideUp(300);
+            });
+
+            $('#main_in ').css({ left: 0 }).animate({ left: '-2400px' }, 3000);
+
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 상단 -->
+        <header id="header">
+            <div id="header_in">
+                <div class="logo"><a href=""><img src="./images/logo.png" alt=""></a></div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="">탑</a>
+                            <ul class="list nav1">
+                                <li>블라우스</li>
+                                <li>티</li>
+                                <li>셔츠</li>
+                                <li>니트</li>
+                            </ul>
+                        </li>
+                        <li><a href="">아우터</a>
+                            <ul class="list nav2">
+                                <li>자켓</li>
+                                <li>코트</li>
+                                <li>가디건</li>
+                                <li>머플러</li>
+                            </ul>
+                        </li>
+                        <li><a href="">팬츠</a>
+                            <ul class="list nav3">
+                                <li>청바지</li>
+                                <li>짧은바지</li>
+                                <li>긴바지</li>
+                                <li>레깅스</li>
+                            </ul>
+                        </li>
+                        <li><a href="">악세서리</a>
+                            <ul class="list nav4">
+                                <li>귀고리</li>
+                                <li>목걸이</li>
+                                <li>반지</li>
+                                <li>팔찌</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 메인 -->
+        <section id="main">
+            <div id="main_in">
+                <img src="./images/slide1.jpg" alt="">
+                <img src="./images/slide2.jpg" alt="">
+                <img src="./images/slide3.jpg" alt="">
+            </div>
+            <button type="button" class="btn btn1">&#60;</button>
+            <button type="button" class="btn btn2">&#62;</button>
+        </section>
+        <!-- 콘텐츠 -->
+        <section id="contents">
+            <div id="contents_in">
+                <div class="contents_box">
+                    <ul class="box1">
+                        <li><a href="">공지사항</a></li>
+                        <li>SNS비회원주문하기 종료 안내 [2019-02-07]</li>
+                        <li>구매이용약관 개정 공지의 건 [2019-01-07]</li>
+                        <li>V센터 종료 안내 [2018-22-07]</li>
+                        <li>개인정보처리방침 개정 안내입니다. [2018-11-07]</li>
+                        <li>데이터프리 서비스 종료 안내 [2018-11-07]</li>
+                    </ul>
+                    <ul class="box2">
+                        <li><a href="">갤러리</a></li>
+                        <li><img src="./images/gallery1.jpg" alt=""></li>
+                        <li><img src="./images/gallery2.jpg" alt=""></li>
+                        <li><img src="./images/gallery3.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="banner"><img src="./images/banner_img.jpg" alt=""></div>
+                <div class="go"><img src="./images/shortcut_img.jpg" alt=""></div>
+            </div>
+        </section>
+        <!-- 하단 -->
+        <footer id="footer">
+            <div id="footer_in">
+                <div class="footer_logo"><img src="./images/logo2.png" alt=""></div>
+                <address class="address">
+                    서울시 강남구 테헤란로 152 (역삼동 강남파이낸스센터) 대표이사 : 변광윤<br>
+                    사업자등록번호 : 220-81-83676 통신판매업신고 : 강남 10630호
+                </address>
+                <div class="sns">
+                    <a href=""><img src="./images/kakao.png" alt=""></a>
+                    <a href=""><img src="./images/insta.png" alt=""></a>
+                    <a href=""><img src="./images/fb.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
