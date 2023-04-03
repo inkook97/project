@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var k변수 = 0; // 전역변수
+
+        function 함수명1() {
+            var k변수 = 1; // 지역변수
+            //실행문;
+        };
+
+        function 함수명2(매개변수) {
+            //실행문;
+        };
+
+        function 함수명3(...매개변수) {
+            // ...매개변수는 spreas문법이라고 함
+            // 데이터를 특정 저장공간(변수)에 펼쳐 놓는다는 의미
+            //실행문;
+        };
+
+        function 함수명4(매개변수) {
+            // return실행문;
+        };
+
+        대상요소.이벤트(function () {
+            //실행문;
+        });
+
+        // 함수표현식
+        const 상수명 = () => {
+            //실행문
+        };
+        const 상수명 = function () {
+            //실행문
+        };
+
+        함수명1();
+        함수명2(매개변수); // 함수 호출시 전달되는 매개변수에 따라서 결과값을 추출
+        함수명3(매개변수1, 매개변수2);
+        const 상수명 = 함수명4(매개변수);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

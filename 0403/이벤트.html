@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+</head>
+
+<body>
+    <h2>이벤트</h2>
+    <script>
+        function win() {
+            alert("인라인방식으로 자바스크립트 이벤트");
+        };
+
+        window.onload = function () {
+            var btn2 = document.querySelector("#btn2");
+            var btn3 = document.querySelector("#btn3");
+
+            document.querySelector('#btn1').onclick = function () {
+                alert("자바스크립트 내부에서 이벤트1");
+            };
+
+            btn2.onclick = function () {
+                alert("자바스크립트 내부에서 이벤트2");
+            };
+
+            btn3.onclick = win03;
+            function win03() {
+                alert("자바스크립트 내부에서 이벤트3");
+            };
+
+        }
+    </script>
+
+
+    <div onclick="win()" style="cursor:pointer">button</div>
+    <button id="btn1">button1</button>
+    <button id="btn2">button2</button>
+    <button id="btn3">button3</button>
+</body>
+
+</html>

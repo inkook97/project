@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로퍼티</title>
+</head>
+
+<body>
+    <h2>프로퍼티</h2>
+    <script>
+        'use strict';
+
+        // 객체선언
+        const user = {
+            userid: 'apple',
+            name: '김사과',
+            gender: '여자',
+            hp: '01011111111',
+            brithday: '20001011',
+            memberId: function () {
+                return "korea" + this.hp; // this => user을 말함
+            }
+        };
+
+        console.log(user.userid);
+        console.log(user.name);
+        console.log(user.gender);
+        console.log(user.hp);
+        console.log(user.brithday);
+
+        console.log('-------------------------------------------------------------------')
+
+        console.log(user.memberId()); // return의 실행 결과값
+        console.log(user.memberId); // 함수 자체로 출력 -> 함수가 저장
+    </script>
+
+</body>
+
+</html>

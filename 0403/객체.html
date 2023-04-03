@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+
+<body>
+    <h2>객체</h2>
+    <script>
+        'use strict';
+        // 객체선언
+        const dog = {
+            name: '루시',
+            age: 10,
+            color: 'white',
+            weight: 3.5
+        };
+
+        // console.log(객체명.속성);
+        console.log(dog.name);
+        console.log(dog.age);
+        console.log(dog.color);
+        console.log(dog.weight);
+
+        // 배열명[index]
+        console.log(dog["name"]);
+        console.log(dog["age"]);
+        console.log(dog["color"]);
+        console.log(dog["weight"]);
+
+        console.log('---------------------------------------------------------------------');
+
+        let arr = [10, 20, 30, 40, 50];
+
+        // 배열을 출력
+        for (let i in arr) {
+            console.log(i); // 배열의 인덱스: 0, 1, 2, 3, 4
+            console.log(arr[i]); // 배열의 요소: 10, 20, 30, 40
+        };
+
+        console.log('---------------------------------------------------------------------');
+
+        // 객체를 출력
+        for (let i in dog) {
+            console.log(i); // name, age, color, weight
+            console.log(dog[i]); // '루시', 10, 'white', 3.5
+        };
+        console.log(dog);
+    </script>
+
+</body>
+
+</html>
