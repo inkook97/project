@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델</title>
+</head>
+
+<body>
+    <h2 id="dom">문서객체모델 - 1</h2>
+    <ul>
+        <li class="front">HTML</li>
+        <li class="front">CSS</li>
+        <li class="front">JavaScript</li>
+        <li class="front">jQuery</li>
+        <li class="serverside">PHP</li>
+        <li>Node.js</li>
+        <li class="front">React</li>
+    </ul>
+
+    <script>
+        'user strict';
+        const id = document.getElementById('dom');
+        //대상.style.color = 'deeppink';
+        //선택된대상.스타일.스타일속성 = '속성값';
+        id.style.color = 'deeppink';
+
+        // const className = document.getElementsByClassName('front');
+        // const className01 = document.getElementsByClassName('front')[1];
+        // for (let i = 0; i < className.length; i++) {
+        //     className[i].style.color = 'skyblue';
+        // };
+        // className01.style.color = 'red';
+
+        const tagName = document.getElementsByTagName('li');
+        for (let i = 0; i < tagName.length; i++) {
+            tagName[i].style.color = 'gold';
+        };
+
+        const querySelector = document.querySelector('ul > li.serverside');
+        querySelector.style.color = '#000000';
+        document.querySelector('ul > li:nth-child(1)').style.color = 'red';
+
+        const list = document.querySelectorAll('ul > li');
+        for (let i = 0; i < list.length; i++) {
+            list[i].style.color = 'blue';
+        };
+        // 다수 선택 하는것은 for문 사용해야 먹힘
+
+    </script>
+</body>
+
+</html>
