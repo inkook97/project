@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const h1 = document.querySelector('h1'); // 출력하는 태그를 객체로 지정
+
+            // 실행할 함수
+            const print = (event) => {
+                let output = '';
+                output += `alt : ${event.altKey}<br/>`
+                output += `ctrl : ${event.ctrlKey}<br/>`
+                output += `shift : ${event.shiftKey}<br/>`
+                output += `code :  ${typeof (event.code) !== 'undefined' ?
+                    event.code : event.KeyCode}`
+
+                h1.innerHTML = output;
+
+            };
+
+            document.addEventListener('keydown', print);
+            document.addEventListener('keyup', print);
+
+            // print -> 실제함수 코드 보여줌 -> print 이벤트가 발생했을때 함수를 실행
+            // print() -> 바로 실행
+        });
+    </script>
+</head>
+
+<body>
+    <h1></h1>
+
+</body>
+
+</html>

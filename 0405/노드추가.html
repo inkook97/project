@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드의 추가</title>
+</head>
+
+<body>
+    <h2>노드의 추가</h2>
+    <p id="item1">JavaScript</p>
+    <p id="item2">PHP</p>
+    <hr />
+    <div id="list">
+        <p id="js">node.js</p>
+        <p>react</p>
+    </div>
+    <hr />
+    <p id="text">지금 시간은 오전 10시 30분입니다.</p>
+
+    <button onclick="appendNode()">노드 추가1</button>
+    <button onclick="insertNode()">노드 추가2</button>
+    <button onclick="appendText()">텍스트 추가</button>
+
+    <script>
+        'user strict'
+        const appendNode = function () {
+            const parent = document.getElementById('list');
+            const newItem = document.getElementById('item1');
+
+            parent.appendChild(newItem)
+        };
+
+        const insertNode = () => {
+            const parent = document.getElementById('list');
+            const js = document.getElementById('js');
+            const newItem = document.getElementById('item2');
+
+            parent.insertBefore(newItem, js);
+            // parent.insertBefore(추가되는노드, 위치가 되는 노드);
+        };
+
+        const appendText = function () {
+            const text = document.getElementById('text').firstChild; // firstChild 안쓰면 HTML 태그 까지 같이 선택됨
+            // const text = document.querySelector('#text');
+            console.log(text);
+            text.insertData(7, "아주 즐거운 ");
+            // text.insertData(글자위치, "추가할 텍스트");
+        };
+
+    </script>
+</body>
+
+</html>

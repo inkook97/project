@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        window.addEventListener('load', function () { });
+        window.addEventListener('load', () => { });
+        document.addEventListener('DOMContentLoaded', () => { });
+        */
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea');
+            const h1 = document.querySelector('h1');
+
+            textarea.addEventListener('keyup', (e) => {
+                const length = textarea.value.length;
+                // console.log(length);
+                console.log(`${length}`); // 데이터를 객체로 사용
+
+                h1.textContent = `글자 수: ${length}`;
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1></h1>
+    <textarea></textarea>
+</body>
+
+</html>

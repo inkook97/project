@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드의 삭제</title>
+    <style>
+        #js2 {
+            background-color: deeppink;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>노드의 삭제</h2>
+    <div id="list">
+        <p>HTML</p>
+        <p id="item">CSS</p>
+        <p id="js" style="background-color: deeppink; color: white;">JavaScript</p>
+        <p id="js2" style="">JavaScript</p>
+    </div>
+    <button onclick="removeNode()">요소 노드 삭제</button>
+    <button onclick="removeAttr()">속성 노드 삭제</button>
+    <button onclick="removeAttr2()">속성 노드 삭제2</button>
+
+    <script>
+        'user strict'
+        const removeNode = function () {
+            const parent = document.getElementById('list'); // 부모를 선택
+            const removeItem = document.getElementById('item'); // 삭제할 자식요소 선택
+
+            const result = parent.removeChild(removeItem);
+            console.log(result); // true, false -> 상태값
+        };
+
+        const removeAttr = function () {
+            const js = document.getElementById('js');
+            js.removeAttribute('style');
+        };
+        const removeAttr2 = function () {
+            const js2 = document.getElementById('js2');
+            js2.removeAttribute('id');
+        };
+
+    </script>
+</body>
+
+</html>

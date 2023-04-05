@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드의 생성</title>
+</head>
+
+<body>
+    <h2>노드의 생성</h2>
+    <p id="el">새로운 문장이 이 문장 앞에 추가됩니다.</p>
+    <p id="attr">이 단락에 새로운 속성이 추가됩니다.</p>
+    <p id="text"></p>
+
+    <button onclick="createNode()">요소 노드 생성</button>
+    <button onclick="createAttr()">속성 노드 생성</button>
+    <button onclick="createText()">텍스트 노드 생성</button>
+
+    <script>
+        'user strict'
+
+        // 요소 생성
+        const createNode = function () {
+            const elNode = document.getElementById('el');
+            // 태그를 생성
+            const newNode = document.createElement('p'); // <p>></p>
+            // 실제로 화면에 보여질 태그및 텍스트를 적용
+            // newNode.innerHTML = '<b>새로운 요소 입니다.</b>';
+            newNode.innerText = '<b>새로운 요소 입니다.</b>';
+            // 생성된 태그 추가
+            // document.body.insertBefore(newNode, elNode);
+            document.body.appendChild(newNode, elNode);
+
+        };
+
+        // 속성 추가
+        const createAttr = function () {
+            const attr = document.getElementById('attr');
+            // 속성을 생성
+            const newAttr = document.createAttribute('style'); // style=""
+            // 대상.value = '값을 적용'
+            // 속성의 값을 설정
+            newAttr.value = 'color:white; background-color:deeppink;';
+            // style = 'color:white; background-color:deeppink;'
+            // 속성적용
+            attr.setAttributeNode(newAttr); // 속성적용
+        };
+
+        // 텍스트 생성
+        const createText = function () {
+            const textNode = document.getElementById('text');
+            // 입력한 글자를 생성
+            const newText = document.createTextNode('새로운 텍스트 ');
+            // 생성한 글자를 추가
+            textNode.appendChild(newText);
+
+
+            ;
+        }
+
+    </script>
+</body>
+
+</html>
