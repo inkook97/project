@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 50px;
+            background-color: #555;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .ball {
+            width: 30px;
+            height: 30px;
+            background-color: #8ac007;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.5s;
+        }
+
+        .effect {
+            transform: scale(2);
+            /* transition: 0.7s; */
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            const container = document.getElementsByClassName('container')[0];
+            const ball = container.children[0];
+
+            //이벤트생성
+            ball.addEventListener('mouseenter', function (e) {
+                e.target.classList.add('effect');
+
+                // e.target.classList.add(); ->클래스스타일적용
+                // e.target.classList.remove(); ->클래스스타일해제
+                // e.target.classList.toggle(); ->클래스스타일을 상대적으로 적용
+
+            });
+            ball.addEventListener('mouseleave', function (e) {
+                e.target.classList.remove('effect');
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

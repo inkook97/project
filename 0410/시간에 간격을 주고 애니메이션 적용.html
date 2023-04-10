@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        button {
+            padding: 5px 15px;
+            background-color: #666;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.5s;
+        }
+
+        button:hover {
+            background-color: #888;
+        }
+
+        .container {
+            margin-top: 35px;
+        }
+
+        .gallery {
+            margin-top: 60px;
+        }
+
+        .ball {
+            position: absolute;
+            left: 40px;
+            top: 184px;
+            width: 30px;
+            height: 30px;
+            background-color: #8ac007;
+            border-radius: 50%;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function () {
+            const queue = document.querySelector("#querue");
+            const ball = document.querySelector(".ball");
+            let x = ball.offsetLeft; // ball의 현재 좌표값
+            let targetx = 500; // ball의 최종위치(목표위치)
+
+            queue.addEventListener("click", function () {
+                animate1(ball, x, targetx);
+            });
+
+            // queue2.addEventListener("click", function () {
+            //     animate1(ball, x, targetx);
+            // });
+
+            function animate1(target, startx, targetx) {
+                const timer = setInterval(function () {
+                    if (startx < targetx) {
+                        // 현재 x값과 최종위치 x값이 될때까지 x에 10px씩 더하기
+                        startx = startx + 10;
+                    } else {
+                        // 최종위치값으로 지정하고 반복실행을 중지
+                        startx = targetx;
+                        clearInterval(timer);
+                    }
+                    ball.style.left = startx + "px";
+                }, 10);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <button id="querue">animate queue</button>
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>
