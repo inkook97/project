@@ -34,3 +34,14 @@ JSON(JavaScript Object Notatino)
 "gender":"여자",
 "age":20
 }
+
+
+nomdemon 사용
+서버 코드를 변경할때마다 서버를 재시작하도록 모듈
+
+npm install -g nomdemon
+(-g 글로벌 설치 -> 전역으로 패키지 설치, 즉 이 컴퓨터에 한번만 설치)
+
+"start": "nodemon 1_mail.js"
+
+npm start 터미널에서 실행

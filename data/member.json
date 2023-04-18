@@ -18,9 +18,5 @@
 		"name": "오렌지",
 		"password": "1234",
 		"gender": "남자"
-	},
-	"apple1": {
-		"name": "홍길동 ",
-		"password": "12345"
 	}
 }
