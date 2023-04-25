@@ -2,10 +2,10 @@ import React from "react";
 
 function Mainimg() {
     return (
-        <div className='mainimg'>
-            <h1 className='title'>mainimg</h1>
+        <div className='subimg'>
+            <img src="/images/main_img.jpg" width="100%" alt="" />
         </div>
-    )
+    );
 };
 
 export default Mainimg;

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Route, Link } from 'react-router-dom';
+import LogoImg from './images/logo_img.png'; // 이미지를 객체로 저장해서 사용
 import Main from './main';
 import Footer from './footer';
 // 컴포넌트를 라우터객체로 지정해서 화면에 마운트 합니다.
@@ -25,16 +26,21 @@ function App() {
     <>
       <div className='header'>
         <div className='header_in'>
-          <div className='logo'><Link to="/">Home</Link></div>
-          <ul>
-            <li><Link to="/components/member">프리미엄 멤버십</Link></li>
-            <li><Link to="/components/product">냉장제품</Link></li>
-            <li><Link to="/components/market">시크릿마켓</Link></li>
-            <li><Link to="/components/brand">브랜드관</Link></li>
-            <li><Link to="/components/pop">기획전</Link></li>
-            <li><Link to="/components/event">이벤트</Link></li>
-            <li><Link to="/components/delivery">가정배달</Link></li>
-          </ul>
+          <div className='logo'>
+            <Link to="/"><img src={LogoImg} alt="" /></Link>
+            {/* <Link to="/"><img src={require("./images/logo_img.png")} alt="" /></Link> */}
+          </div>
+          <div className='nav'>
+            <ul>
+              <li><Link to="/components/member">프리미엄 멤버십</Link></li>
+              <li><Link to="/components/product">냉장제품</Link></li>
+              <li><Link to="/components/market">시크릿마켓</Link></li>
+              <li><Link to="/components/brand">브랜드관</Link></li>
+              <li><Link to="/components/pop">기획전</Link></li>
+              <li><Link to="/components/event">이벤트</Link></li>
+              <li><Link to="/components/delivery">가정배달</Link></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div>
@@ -47,6 +53,9 @@ function App() {
         <Route path="/components/event" component={Event}></Route>
         <Route path="/components/delivery" component={Delivery}></Route>
       </div>
+      {/* 배경이미지넣기 */}
+      <div className='imgbox'></div>
+      
       <Main />
       <Footer />
       {/* 주석처리 */}

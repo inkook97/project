@@ -1,9 +1,15 @@
 import React from "react";
+import ContentsItem from "./contents_item";
 
 function Contents() {
     return (
         <div className='contents'>
-            <h1 className='title'>contents</h1>
+            <ContentsItem />
+            <ContentsItem />
+            <ContentsItem />
+            <ContentsItem />
+            <ContentsItem />
+            <ContentsItem />
         </div>
     )
 };
