@@ -1,0 +1,12 @@
+styled-Components
+JS안에 CSS를 작성하는 라이브러리입니다.
+jsx파일내에서 컴포넌트를 생성하고 스타일을 적용하며
+선언시 styled.태그명을 적용시 이 컴포넌트는 태그의 기능이 적용됨
+
+yarn add styled-Components
+
+
+react-icons
+(https://react-icons.github.io/react-icons/#/)
+
+yarn add react-icons
