@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+
+    list-style: none;
+}
+
+.container {
+    margin-top: 35px;
+    min-width: 440px;
+}
+
+.controller {
+    padding-top: 20px;
+}
+
+.controller li {
+    display: inline-block;
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.controller li:first-childe {
+    margin-left: 0;
+}
+
+.controller li.on {
+    width: 50px;
+    background-color: rgba(0, 0, 255, 0.587);
+}
+
+.picture {
+    position: relative;
+    margin-top: 30px;
+    width: 400px;
+    height: 400px;
+}
+
+.picture ul {}
+
+.picture li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.picture img {
+    max-width: 100%;
+    height: auto;
+}
+
+.picture li.active {
+    opacity: 1;
+}
