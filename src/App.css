@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+.title {
+  font-size: 100px;
+  color: skyblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  width: 100%;
+  height: 120px;
+  background-color: yellowgreen;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header_in {
+  margin: 0 auto;
+  width: 1100px;
+  height: 120px;
+  background-color: rgb(220, 231, 198);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.header_in .logo {
+  width: 130px;
+  height: 120px;
+  background-color: violet;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header_in .nav {
+  width: 850px;
+  height: 120px;
+  background-color: violet;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header_in .nav ul {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mainimg {
+  width: 100%;
+  height: 450px;
+  background-color: rgb(50, 205, 182);
+}
+
+/* 일반적인 스타일시트에서 배경이미지
+ .imgbox {
+  margin: 0 auto;
+  width: 1100px;
+  height: 200px;
+  background: url(./images/logo.png);
+} */
+
+/* 슬라이드 요소수정 */
+#mainimg {}
+
+#mainimg button {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+}
+
+#mainimg .carousel-control-next-icon,
+#mainimg .carousel-control-prev-icon {
+  border: 1px solid #fff;
+  border-radius: 50%;
+
+}
+
+
+
+/* 서브컴포넌트 공통선언 */
+.subpath {}
+
+.subimg {
+  width: 100%;
+  height: 300px;
+  background-color: aqua;
+  overflow: hidden;
+}
+
+.subttl {
+  width: 100%;
+  height: 300px;
+  background-color: aqua;
+  overflow: hidden;
+}
+
+.contents {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contents_in {
+  width: 1100px;
+  height: 1000px;
+  background-color: yellowgreen;
+}
+
+.items {
+  width: 100%;
+  height: 300px;
+  background-color: violet;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.items>div {
+  margin-top: 20px;
+  padding: 5px 0 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.footer {
+  float: left;
+  width: 100%;
+}
+
+.footer-top {
+  width: 1100px;
+  height: 260px;
+  margin: 0 auto;
+  background-color: rgb(171, 171, 171);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-top>div {
+  font-size: 14px;
+}
+
+.footer-middle {
+  border: 1px solid #000;
+  width: 1100px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+}
+
+.footer-middle ul {
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.footer-middle li {
+  float: left;
+}
+
+.footer-middle li::before {
+  content: '|';
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.footer-middle li:first-child::before {
+  content: '';
+}
+
+.footer-middle li a {
+  text-decoration: none;
+  color: #000;
+  padding: 4px 10px 4px 0;
+  box-sizing: border-box;
+}
+
+
+/* brand Tabmenu */
+#brand_tab {}
+
+#brand_tab .nav-item {
+  width: 25%;
+}
+
+#brand_tab .nav-item button {
+  width: 100%;
+}
+
+/* event Tabmenu */
+#event_tabmn .nav-item {
+  width: 50%;
+}
+
+#event_tabmn .nav-item button {
+  width: 100%;
 }

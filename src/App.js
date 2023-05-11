@@ -1,68 +1,74 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-// import Counter from './components/counter';
-// import Input from './components/input';
-// import MultiInput from './components/multiInput';
-// import UserList from './components/userli';
-// import UserList2 from './components/userli02';
-//--------------------------------------------------
-import UserList from './components/userList';
+import { Route, Link } from 'react-router-dom';
+import { ItemProvider } from './context';
+
+
+import Main from './main';
+import Footer from './footer';
+//컴포넌트를 라우터객체로 지정해서 화면에 마운트 합니다
+//yarn add react-router-dom@5
+//설정:
+//특정 주소에 컴포넌트 연결하는 방법
+//<Route path="주소" component={보여줄 컴포넌트}></Route>
+//다른 주소로 이동시키기
+//import { Route, Link } from 'react-router-dom';
+//<Link to="주소">문자</Link>
+import Member from './components/member';
+import Product from './components/product';
+import Market from './components/market';
+import Brand from './components/brand';
+import Pop from './components/pop';
+import Event from './components/event';
+import Delivery from './components/delivery';
+
+//리액트부트스트랩사용
+//yarn add react-bootstrap bootstrap
+//index.js에 import 'bootstrap/dist/css/bootstrap.css';
+//부트스트랩을 사용하는 컴포넌트에 사용하는 리액트 부트스트랩을 연결
+//리액트아이콘
+//yarn add react-icons
 
 function App() {
-  const [users, setUsers] = useState([
-    {
-      id: 1,
-      username: '김사과',
-      email: 'apple@apple.com',
-      // active: true
-    },
-    {
-      id: 2,
-      username: '오렌지',
-      email: 'orange@orange.com'
-    },
-    {
-      id: 3,
-      username: '반하나',
-      email: 'banana@banana.com'
-    },
-    {
-      id: 4,
-      username: '이메론',
-      email: 'melon@melon.com'
-    },
-    {
-      id: 5,
-      username: '배애리',
-      email: 'berry@berry.com'
-    }
-  ]);
 
-
-  const onToggle = (id) => {
-    setUsers(
-      users.map(user => user.id === id ? { ...user, active: !user.active } : user)
-      // user.active=(user.id===id ? (!users.active) : user.active);
-      // return user;
-    );
-    // map()의 사용은 배열의 불변성을 유지하면서 배열을 업데이트하기 위해 사용
-    // ...user :active속성이 들어간 user들(배열) -> active속성이 적용
-    // active: 속성을 의미
-    // !user.active : 다른 user의 속성을 의미하고 !속성이 없다는 부정을 의미
-  };
-  const onRemove = (id) => {
-    setUsers(users.filter(user => user.id !== id));
-  };
   return (
-    <div>
-      {/* <Counter /> */}
-      {/* <Input /> */}
-      {/* <MultiInput /> */}
-      {/* <UserList /> */}
-      {/* <UserList2 /> */}
-      <UserList users={users} onToggle={onToggle} onRemove={onRemove} />
-    </div>
-  )
+    <>
+      <ItemProvider>
+        <div className='header'>
+          <div className='header_in'>
+            <div className='logo'>
+              {/* <Link to="/"><img src={LogoImg} alt="" /></Link> */}
+              <Link to="/"><img src={require('./images/logo.png')} alt="" /></Link>
+            </div>
+            <div className='nav'>
+              <ul>
+                <li><Link to="/components/member" style={{ textDecoration: 'none' }}>프리미엄멤버쉽</Link></li>
+                <li><Link to="/components/product" style={{ textDecoration: 'none' }}>냉장제품</Link></li>
+                <li><Link to="/components/market" style={{ textDecoration: 'none' }}>시크릿마켓</Link></li>
+                <li><Link to="/components/brand" style={{ textDecoration: 'none' }}>브랜드관</Link></li>
+                <li><Link to="/components/pop" style={{ textDecoration: 'none' }}>기획전</Link></li>
+                <li><Link to="/components/event" style={{ textDecoration: 'none' }}>이벤트</Link></li>
+                <li><Link to="/components/delivery" style={{ textDecoration: 'none' }}>가정배달</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Route path="/" exact={true} component={Main}></Route>
+          <Route path="/components/member" component={Member}></Route>
+          <Route path="/components/product" component={Product}></Route>
+          <Route path="/components/market" component={Market}></Route>
+          <Route path="/components/brand" component={Brand}></Route>
+          <Route path="/components/pop" component={Pop}></Route>
+          <Route path="/components/event" component={Event}></Route>
+          <Route path="/components/delivery" component={Delivery}></Route>
+        </div>
+
+        <Footer />
+      </ItemProvider>
+      {/* 주석처리 */}
+    </>
+  );
 }
 
 export default App;
