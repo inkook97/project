@@ -40,13 +40,18 @@ function Brand() {
 
     return (
         <div>
-            <div className="subimg">brand</div>
+            <div className="subimg" style={{ width: '100%', height: '200px', backgroundColor: '#fff' }}>
+                <div className="subimg_in">
+                    <p><a href=""><span>img</span> Home > 브랜드</a></p>
+                    <h2>브랜드</h2>
+                </div>
+            </div>
             <div className="contents">
                 <div style={{
                     margin: '0 auto',
                     width: '1100px',
                     height: '3900px',
-                    backgroundColor: '#ccc'
+                    backgroundColor: '#fff'
                 }} id='brand_tab'>
                     <Tabs
                         defaultActiveKey="profile"
