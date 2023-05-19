@@ -1,0 +1,16 @@
+click : 클릭이 끝나는 순간작동
+dblclick : 마우스 더블클릭시 작동
+
+mousedown : 마우스를 클릭하는 순간 작동(after or before함께 사용)
+mouseup : 마우스 클릭이 끝나는 순간 작동(after or before함께 사용)
+
+mouseover : 마우스 올릴때 색이 변한상태 유지
+mouseout : 마우스 올렸다 치웠을때 색이 변함
+
+mouseenter : 마우스 올릴때 파란색 => 치우면 핑크
+mouseleave : 마우스 핑크색 => 올리면 파란색 => 치우면 핑크
+
+mousemove : 마우스 움직일때 발생하는 이벤트  (event사용)
+
+focusin : 클릭하면 깜빡깜빡
+focusout : 다른곳 클릭하면 없어짐

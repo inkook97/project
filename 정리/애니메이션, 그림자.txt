@@ -1,0 +1,94 @@
+[CSS3 웹 브라우저별 접두사(vendor prefix) ]
+
+
+CSS3는 표준안이 아직 확정되지 않은 상태이기 때문에 최신 웹 브라우저들은 CSS3 속성을 실험적으로 제공하고 있음. 
+이를 위해 속성이나 속성 값 앞에 웹 브라우저별로 접두사(vendor prefix)를 제공하고 있으며 이 접두사의 경우 
+웹 브라우저별로 다르기 때문에 하나의 속성을 선언하기 위해서는 여러
+번의 동 일한 선언을 지정해야 함.
+
+파이어폭스 -moz-
+크롭, 사파리 -webkit-
+오페라 -o-
+익스플로러 -ms
+
+
+text-shadow:[dx] [dy] [bulr] [color]
+;텍스트에 그림자를 지정
+
+dx : 본체와 그림자의 가로방향 거리
+dy : 본체와 그림자의 세로방향 거리
+bulr : 그림자의 흐려짐 정도
+color : 그림자의 색상
+
+
+box-shadow:[dx] [dy] [bulr] [spread] [set]
+;지정된 요소의 그림자를 설정함
+ 
+dx : 그림자의 가로방향 위치
+dy : 그림자의 세로방향 위치
+bulr : 흐려짐 정도
+spread : 번짐 정도
+set : 그림자의 형태
+ •outset : 요소 바깥쪽으로 그림자가 떨어짐 (기본값)
+ •inset : 요소 안쪽으로 그림자가 떨어짐
+
+https://color.adobe.com/ko/create/color-wheel
+
+[RGBA 형식 및 HSLA 형식의 사용 예]
+http://www.colorpicker.com/
+
+RGBA형식 --> color:rgba(255, 127, 45, 0.5)
+             color:rgba(red, greeen, blue, 투명도)
+
+
+http://www.workwithcolor.com/hsl-color-picker-01.htm
+
+HSLA형식 --> color:hsla(0, 0%, 100%, 0.5)
+            color:hsla(색상, 채도, 명도, 투명도) 
+
+
+gradient :gradient를 생성함
+background:-webkit-gradient(그라디언트종류,방향, 시작하는 색상, 끝나는색상);
+background:-webkit-liner-gradient(방향, 시작하는 색상, 끝나는색상);
+background:-webkit-radial-gradient(시작하는 색상, 끝나는색상);
+
+http://www.colorzilla.com/gradient-editor/     
+
+
+transform:요소의 형태를 변경함
+translate([dx],[dy]) : 지정한 크기 만큼 이동 시킴
+scale([ds]) : 지정한 배율 만큼 확대함
+rotate([deg]) : 지정한 각도만큼 회전 시킴
+skew([degx],[degy]) : 지정한 경사로 기울림
+
+[css애니메이션]
+1. transition:[변환속성], [애니메이션 시간];
+   class 선택상태 변경되어 속성이 변화할 때 상태 변화를 부드럽게 애니메이션함
+   변환속성 : 변환할 속성 all로 지정되면 모든 속성이 영향받음
+   애니메이션 시간 : 애니메이션 시간을 지정함
+
+   transition-delay : 애니메이션의 지연시간을 지정함
+   transition-duration : 애니메이션이 실행시간을 지정함 => 1s / 자바스크립트 => 1000
+   transition-property : 어떤 속성을 변형할지 지정함
+   transition-timing-function : 
+   linear : 시작에서 끝까지 똑같은 속도로 진행
+   ease : 처음에는 천천히 시작하고 점점 빨라지다가 마지막엔 천천히 끝남
+   ease-in : 시작은 느리게
+   ease-out : 느리게 끝냄
+   ease-in-out : 느리게 시작하고 느리게 끝냄
+
+
+2. animation 애니메이션을 지정함
+   animation-name : 애니메이션 이름을 지정함
+   animation-delay : 애니메이션의 지연시간을 지정함
+    animation-direction : 애니메이션의 진행방향 지정함
+    alternate : 반대방향으로 진행
+    normal : 원래방향으로 진행
+    animation-duration : 애니메이션이 실행시간을 지정함
+    animation-iteration-count : 애니메이션이 반복 횟수를 지정함
+    animation-play-state : 애니메이션의 재생상태를 지정함
+                    paused, anumation-play-state : paused;
+                    animation-timing-function : 애니메이션이 속도 형태를 지정함
+   keyframes 애니메이션의 키프레임을 지정함
+   form : 애니메이션의 시작 프레임을 설정함
+   to : 애니메이션의 시작 프레임을 설정함 중간으 키프레임을 %단위로 지정 할 수 있음.
